@@ -1,0 +1,13 @@
+{
+  "id": "{9DA5A38D-293D-4273-ABDB-43D78E90FE0D}",
+  "name": "Google Traffic",
+  "type": 3,
+  "vendor": "Google",
+  "aliases": [
+    "Google Traffic"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "GoogleTraffic"
+}

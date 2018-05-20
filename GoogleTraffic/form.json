@@ -1,0 +1,111 @@
+{
+  "elements": [
+    {
+      "type": "Label",
+      "label": "___ [ Support ] ________________________________________________________________________________________"
+    },
+    {
+      "type": "Label",
+      "label": "If you like this module and want to support further development of my symcon modules, feel free to donate at www.paypal.me/codeking"
+    },
+    {
+      "type": "Label",
+      "label": "www.paypal.me/codeking"
+    },
+    {
+      "type": "Label",
+      "label": "___ [ Google Maps ] ____________________________________________________________________________________"
+    },
+    {
+      "name": "api_key",
+      "type": "ValidationTextBox",
+      "caption": "API Key"
+    },
+    {
+      "type": "List",
+      "name": "destinations",
+      "caption": "Destinations",
+      "add": true,
+      "delete": true,
+      "sort": {
+        "column": "destination",
+        "direction": "ascending"
+      },
+      "columns": [
+        {
+          "label": "Name",
+          "name": "name",
+          "width": "120px",
+          "add": "Address",
+          "edit": {
+            "type": "ValidationTextBox"
+          }
+        },
+        {
+          "label": "Destination",
+          "name": "destination",
+          "width": "auto",
+          "add": "Brandenburger Tor, Berlin",
+          "edit": {
+            "type": "ValidationTextBox"
+          }
+        }
+      ],
+      "values": [
+      ]
+    },
+    {
+      "type": "IntervalBox",
+      "name": "interval",
+      "caption": "Seconds"
+    },
+    {
+      "type": "Label",
+      "label": "___ [ Logging ] ________________________________________________________________________________________"
+    },
+    {
+      "type": "CheckBox",
+      "name": "log",
+      "caption": "enable logging"
+    }
+  ],
+  "status": [
+    {
+      "code": 101,
+      "icon": "inactive",
+      "caption": "Please enter a valid Google Maps Distance API key."
+    },
+    {
+      "code": 102,
+      "icon": "active",
+      "caption": "The Google Maps Distance API key is valid."
+    },
+    {
+      "code": 200,
+      "icon": "inactive",
+      "caption": "The Google Maps Distance API key is invalid!"
+    },
+    {
+      "code": 201,
+      "icon": "inactive",
+      "caption": "Unknown status error. See logs for more details."
+    },
+    {
+      "code": 202,
+      "icon": "inactive",
+      "caption": "Please provide your latitude and longitude in the location control module!"
+    },
+    {
+      "code": 203,
+      "icon": "inactive",
+      "caption": "Please enter at least one destination!"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Button",
+      "label": "Update Traffic",
+      "onClick": "GoogleTraffic_Update($id)"
+    }
+  ]
+}
